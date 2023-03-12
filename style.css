@@ -5,19 +5,19 @@ body {
 }
 
 .main {
-    max-width: 1180px;
 margin: 0 auto;
 }
 
 .item {
   
-    width: 400px;
+    width: 40em;
     cursor: pointer;
 }
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .title {
     display: flex;
@@ -38,31 +38,82 @@ li {
     display: flex;
     justify-content: center;
 }
+
 .zero {
     display: flex;
     justify-content: center;
-    
+    max-height: 80%;
+    max-width: 70%;
+    margin: 0 auto;
 }
 .picture {
-    
-    
     max-height: 0;
+    max-width: 0;
     overflow: hidden;
     transition: max-height 2s;
     display: flex;
     justify-content: center;
     transition: all 2s;
+    margin: 0 auto;
 }
 label {
     display: none;
+    cursor: pointer;
 }
 input {
     display: none;
+    
+}
+
+.cross {
+    visibility: hidden;
+}
+.crosses {
+    transform: rotate(-130deg);
+}
+
+/* появление крестика */
+.container:hover .cross {
+    color: black
+}
+li:hover .cross {
+    visibility: visible;
+    transition: 1s ease;
+    transform: rotate(-130deg);
+} 
+
+span {
+    align-items: flex-end;
+ }
+ img {
+    max-height: 80%;
+    max-width: 70%;
+    border-radius: 5%;
+    box-shadow: 0 1em 2em;
+}
+.line {
+    display: block;
+    background-color: white;
+    height: 0.1em;
+    width: 100%;
+    margin-top: 0.6em;
 }
 
 /* раскрытие картинки при клике */
 
 label + input[type="radio"]:checked + .picture {
-    max-height: 300px;
+    max-height: 80%;
+    max-width: 70%; 
 }
+
+
+
+
+label + input[type="radio"]:checked + .sp{
+color: gold;
+}
+
+
+
+
 

@@ -1,0 +1,40 @@
+body {
+
+    background-color: rgb(181, 69, 158);
+    
+}
+
+.main {
+    max-width: 1180px;
+margin: 0 auto;
+}
+
+.item {
+  
+    width: 400px;
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+li {
+    list-style: none;
+}
+.zero {
+    display: flex;
+    justify-content: center;
+    
+}
+.text {
+    display: flex;
+    justify-content: center;
+}

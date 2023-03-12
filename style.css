@@ -1,7 +1,5 @@
 body {
-
-    background-color: rgb(181, 69, 158);
-    
+    background-color: rgb(181, 69, 158);  
 }
 
 .main {
@@ -17,13 +15,14 @@ margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    width: 40em;
     
 }
 .title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 li {
@@ -59,6 +58,14 @@ li {
 label {
     display: none;
     cursor: pointer;
+    font-size: 1.5em;
+    letter-spacing: .2em;
+    font-weight: bolder;
+}
+h1 {
+    font-size: 2em;
+    letter-spacing: .7em;
+    font-weight: bolder;
 }
 input {
     display: none;
@@ -76,12 +83,17 @@ input {
 .container:hover .cross {
     color: black
 }
-li:hover .cross {
+.container:hover .cross {
     visibility: visible;
     transition: 1s ease;
-    transform: rotate(-130deg);
+    
 } 
-
+.title:hover .cross {
+    transform: rotate(-130deg)
+}
+#one {
+    color: blue;
+}
 span {
     align-items: flex-end;
  }
@@ -106,14 +118,59 @@ label + input[type="radio"]:checked + .picture {
     max-width: 70%; 
 }
 
+.container:checked + .title {
+    color: blue;
+    }
 
+@media (hover: hover)  {
+    li:hover .cross {
+        visibility: visible;
+        transition: 1s ease;
+        transform: rotate(-130deg);
+    }
+    .container:hover .cross {
+        color: black
+    }
+    li:hover .cross {
+        visibility: visible;
+        transition: 1s ease;
+        transform: rotate(-130deg);
+    }
+    label:hover ~ .picture {
+        max-height: 80%;
+        max-width: 70%; 
+        transition: linear 2s;
+    }
+    .picture:hover {
+        max-height: 80%;
+        max-width: 70%; 
+    }
+.container:hover .title {
+color: blue;
+}
+}
 
-
-label + input[type="radio"]:checked + .sp{
-color: gold;
+@media all and (max-width: 320px) {
+    h1 {
+        font-size: .5em;
+    }
+    label {
+        font-size: .7em;
+    }
+    img {
+        width: 10em;
+    }
 }
 
 
-
-
-
+ @media all and (max-width: 820px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    label {
+        font-size: 1.2em;
+    }
+    img {
+        width: 15em;
+    }
+} 

@@ -38,3 +38,31 @@ li {
     display: flex;
     justify-content: center;
 }
+.zero {
+    display: flex;
+    justify-content: center;
+    
+}
+.picture {
+    
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s;
+    display: flex;
+    justify-content: center;
+    transition: all 2s;
+}
+label {
+    display: none;
+}
+input {
+    display: none;
+}
+
+/* раскрытие картинки при клике */
+
+label + input[type="radio"]:checked + .picture {
+    max-height: 300px;
+}
+
